@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/colorwalf/gulp-sass.git",
   "author": "Jeff Liu <jeff@cct95.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
 }

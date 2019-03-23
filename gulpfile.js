@@ -2,6 +2,7 @@
 //  在package.json內引用的套件
 
 const gulp = require('gulp');
+// const path = require('path');   //用來定義路徑
 const gulpSass = require('gulp-sass');
 
 //  定義工作 / function (cb = callback function)
@@ -12,7 +13,7 @@ const gulpSass = require('gulp-sass');
 
 
 const buildSass = function(cb){
-    gulp.src(path.join(srcRoot, 'styles/**/*.scss'))
+    gulp.src('./src/styles/index.scss')
         .pipe(gulpSass())
         .pipe(gulp.dest('build/'));
     cb();
