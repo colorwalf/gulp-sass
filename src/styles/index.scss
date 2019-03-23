@@ -18,10 +18,6 @@ $card-bgcolors: (
 
 $list: youth culture life entertainment gadget education design;
 
-::placeholder {
-  color: gray;
-}
-
 @mixin box-shadow(){
   box-shadow: $card-boxshadow;
 }
