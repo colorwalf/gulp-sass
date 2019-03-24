@@ -89,4 +89,4 @@ gulp.watch('src/sprite/**/*.*', { events: 'all' }, function(cb){
     cb();
 });
 
-exports.default = gulp.series(buildSass, webServer);
+exports.default = gulp.series(buildSass, webServer, compressImage, webFont, CSSSprite);
