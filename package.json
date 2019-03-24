@@ -8,6 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-connect": "^5.7.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp.spritesmith": "^6.9.0"
   }
 }

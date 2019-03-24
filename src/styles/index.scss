@@ -1,33 +1,55 @@
-/*===== variables =====*/
-$default-bgcolor: #e0e0e0;
-$card-block-default-color: #1c2c3c;
-$card-boxshadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.15);
-$single-news-title-padding: 12px 0 0;
-$card-padding: 4px 0;
-$card-radius: 4px;
-$card-z-index: 999;
-$card-bgcolors: (
-        youth: #fbd304,
-        culture: #dc1454,
-        life: #14b35c,
-        entertainment: #067aef,
-        gadget: #04b494,
-        education: #1c2c3c,
-        design: #54443c
-);
+@import "font-awesome/fontawesome";
 
-$list: youth culture life entertainment gadget education design;
+@import "font-awesome/brands.scss";
+@import "font-awesome/solid.scss";
 
-@mixin box-shadow(){
-  box-shadow: $card-boxshadow;
+/*  樣式變數定義  */
+
+@import "var";
+
+/*  mixins定義 */
+
+@import "mixin";
+
+/*  全站統一性定義  */
+
+
+@import "global";
+
+.logo.icon-logo{
+  display: inline-block;
+  width: 74px;
+  height: 74px;
+  background-size: 84px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
 }
 
-body {
-  background-color: $default-bgcolor;
+.social-list{
+  list-style: none;
+  .social-item{
+    display: inline-block;
+  }
 }
+
+.payment-zone{
+  text-align: right;
+  padding: 2rem 0;
+  line-height: 3rem;
+  .payment-list{
+    list-style: none;
+    .payment-item{
+      margin: 15px 5px;
+      display: inline-block;
+    }
+  }
+}
+
+
 
 .card {
   border: none;
+
   @include box-shadow();
   .card-block{
     a{
@@ -74,5 +96,14 @@ body {
         background-color: map-get($card-bgcolors, $name);
       }
     }
+  }
+}
+
+.user {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
   }
 }
